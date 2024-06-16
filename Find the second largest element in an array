@@ -22,4 +22,27 @@ class Compute {
 }
 
 
+optimal approach that is wothout sorting technique:-
+
+class Solution {
+    int print2largest(int arr[], int n) {
+        
+        int largest = arr[0];
+        int secondLargest=-1;
+        for(int i=1;i<n;i++)
+        {
+            if(largest<arr[i]){
+                secondLargest=largest;
+               largest=arr[i];
+            }
+            if(largest>arr[i])
+            secondLargest=secondLargest<arr[i]? arr[i]:secondLargest;
+            
+        }
+        return secondLargest;
+        
+        
+        
+    }
+}
 
